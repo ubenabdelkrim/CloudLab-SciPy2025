@@ -93,6 +93,6 @@ Create a `.lithops_config` file with your credentials and backend options.
 
 ## 📣 About
 
-This code is part of the **CloudLab-SciPy2025** tutorial series for scientific computing in the cloud.  
+This code is part of the **PyRun-SciPy2025** tutorial series for scientific computing in the cloud.  
 
 ---
