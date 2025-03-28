@@ -24,6 +24,14 @@ You may also need to configure your cloud backend (e.g., AWS, IBM, Azure) using 
 
 ---
 
+## 🧪 Recommended Environment: [pyrun.cloud](https://pyrun.cloud)
+
+These notebooks are designed to run seamlessly on **[pyrun.cloud](https://pyrun.cloud)** — a managed JupyterLab platform optimized for working with serverless technologies like Lithops and Dataplug.
+
+> 🟢 Using `pyrun.cloud` ensures a smoother experience without local setup hassles.
+
+---
+
 ## 📁 Example 1 – Using Dataplug Locally
 
 The notebook [`dataplug_example.ipynb`](dataplug:example.ipynb) shows how to:
@@ -72,4 +80,3 @@ jupyter notebook dataplug_lithops.ipynb
 ## 📣 About
 
 This code is part of the **CloudLab-SciPy2025** tutorial series for scientific computing in the cloud.
-
