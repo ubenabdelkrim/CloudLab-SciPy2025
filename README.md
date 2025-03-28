@@ -1,82 +1,98 @@
-# ☁️ PyrRun-SciPy2025
+# ☁️ CloudLab-SciPy2025
 
-This repository contains examples of how to use [Dataplug](https://github.com/CLOUDLAB-URV/dataplug) for managing large-scale data stored in the cloud, and how to scale up processing using [Lithops](https://github.com/lithops-cloud/lithops) for seamless serverless execution.
+This repository contains hands-on examples for processing large-scale scientific data in the cloud using:
 
----
-
-## 📦 Installation
-
-First, install the required libraries:
-
-### 🔌 Install Dataplug
-
-```bash
-pip install git+https://github.com/CLOUDLAB-URV/dataplug
-```
-
-### ⚙️ Install Lithops
-
-```bash
-pip install lithops
-```
-
-You may also need to configure your cloud backend (e.g., AWS, IBM, Azure) using the [Lithops config guide](https://github.com/lithops-cloud/lithops#configuration).
+- [**Dataplug**](https://github.com/CLOUDLAB-URV/dataplug): Unified data access from cloud storage.
+- [**Lithops**](https://github.com/lithops-cloud/lithops): Serverless framework for scalable parallel processing.
 
 ---
 
-## 🧪 Recommended Environment: [pyrun.cloud](https://pyrun.cloud)
+## 🚀 Quick Start (Recommended): Use [pyrun.cloud](https://pyrun.cloud)
 
-These notebooks are designed to run seamlessly on **[pyrun.cloud](https://pyrun.cloud)** — a managed JupyterLab platform optimized for working with serverless technologies like Lithops and Dataplug.
+This tutorial is designed to run **seamlessly** on [**pyrun.cloud**](https://pyrun.cloud), a cloud-based JupyterLab platform with:
 
-> 🟢 Using `pyrun.cloud` ensures a smoother experience without local setup hassles.
+✅ Pre-installed dependencies  
+✅ Auto-configured Lithops backend  
+✅ Direct support for Dataplug and serverless workflows
+
+> 🟢 No setup required — just launch the notebooks and start experimenting!
 
 ---
 
-## 📁 Example 1 – Using Dataplug Locally
+## 🧪 Running the Examples
 
-The notebook [`dataplug_example.ipynb`](dataplug:example.ipynb) shows how to:
+### 📁 Example 1 – Using Dataplug Locally
 
-1. Load a FASTA file directly from an S3 bucket using `CloudObject.from_s3`.
-2. Inspect the number of sequences and total size.
-3. Preprocess the file by splitting it into chunks.
-4. Partition the data into slices for parallel or sequential processing.
+Notebook: [`dataplug_example.ipynb`](dataplug_example.ipynb)
 
-### Run the notebook
+This notebook shows how to:
+
+1. Load a FASTA file from an S3 bucket using `CloudObject.from_s3`
+2. Explore metadata (e.g., number of sequences)
+3. Preprocess and split the file into chunks
+4. Partition the data for analysis
+
+Run it on pyrun or locally with:
 
 ```bash
-jupyter notebook dataplug.ipynb
+jupyter notebook dataplug_example.ipynb
 ```
 
 ---
 
-## ☁️ Example 2 – Scalable Processing with Dataplug + Lithops
+### ☁️ Example 2 – Scalable Processing with Dataplug + Lithops
 
-The second notebook [`dataplug_lithops.ipynb`](dataplug_lithops:example.ipynb) shows how to use **the exact same code** to process the data **on the fly in Lithops**, without local resource limits.
+Notebook: [`dataplug_lithops.ipynb`](dataplug_lithops.ipynb)
 
-It demonstrates how to:
+This notebook demonstrates how to scale the same processing logic to the cloud using Lithops:
 
-- Partition a FASTA file into slices using `co.partition(...)`
-- Define a processing function for each partition (`process_fasta_partition`)
-- Use `lithops.FunctionExecutor` to execute processing in parallel
+- Partition the FASTA file with `co.partition(...)`
+- Apply `process_fasta_partition` to each slice
+- Launch parallel processing with `lithops.FunctionExecutor`
 
-### Run the notebook
+Run it on pyrun or locally with:
 
 ```bash
 jupyter notebook dataplug_lithops.ipynb
 ```
 
-> ✅ Thanks to the native integration of Dataplug with Lithops, you can scale your code effortlessly — no changes in logic required!
+> ✅ The integration between Dataplug and Lithops is native — no code changes needed to go from local to serverless!
 
 ---
 
-## 💡 What You Need
+## 💻 Running Locally (Optional)
 
-- Access to an S3-compatible storage (AWS S3, MinIO, etc.)
-- Proper cloud credentials (can be set with `aws configure` or via environment variables)
+If you prefer to run the notebooks locally instead of pyrun, follow these steps:
+
+### 📦 Install required libraries
+
+```bash
+pip install git+https://github.com/CLOUDLAB-URV/dataplug
+pip install lithops
+```
+
+### ⚙️ Configure Lithops
+
+To execute functions in the cloud (AWS, IBM Cloud, Azure, etc.), you’ll need to configure your Lithops backend manually.
+
+You can follow the official guide here:  
+👉 https://github.com/lithops-cloud/lithops#configuration
+
+Create a `lithops_config.yaml` file with your credentials and backend options.
+
+---
+
+## 📚 Requirements
+
 - Python 3.10 or higher
+- Access to an S3-compatible storage (e.g., AWS S3, MinIO)
+- Internet connection
+- Cloud credentials (automatically set in pyrun, or configured manually for local runs)
 
 ---
 
 ## 📣 About
 
-This code is part of the **CloudLab-SciPy2025** tutorial series for scientific computing in the cloud.
+This code is part of the **CloudLab-SciPy2025** tutorial series for scientific computing in the cloud.  
+
+---
