@@ -78,7 +78,7 @@ To execute functions in the cloud (AWS, IBM Cloud, Azure, etc.), you’ll need t
 You can follow the official guide here:  
 👉 https://github.com/lithops-cloud/lithops#configuration
 
-Create a `lithops_config.yaml` file with your credentials and backend options.
+Create a `.lithops_config` file with your credentials and backend options.
 
 ---
 
