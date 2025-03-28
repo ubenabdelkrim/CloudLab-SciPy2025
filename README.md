@@ -1,4 +1,4 @@
-# ☁️ CloudLab-SciPy2025
+# ☁️ PyrRun-SciPy2025
 
 This repository contains examples of how to use [Dataplug](https://github.com/CLOUDLAB-URV/dataplug) for managing large-scale data stored in the cloud, and how to scale up processing using [Lithops](https://github.com/lithops-cloud/lithops) for seamless serverless execution.
 
