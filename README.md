@@ -2,7 +2,7 @@
 
 This repository contains hands-on examples for processing large-scale scientific data in the cloud using:
 
-- [**Dataplug**](https://github.com/CLOUDLAB-URV/dataplug): Unified data access from cloud storage.
+- [**Dataplug**](https://github.com/CLOUDLAB-URV/dataplug): A lightweight, client-side Python framework for efficient **partitioning of unstructured scientific data** stored in object storage (like Amazon S3), enabling elastic cloud processing.
 - [**Lithops**](https://github.com/lithops-cloud/lithops): Serverless framework for scalable parallel processing.
 
 ---
